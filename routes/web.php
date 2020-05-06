@@ -17,6 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::group(['namespace' => 'Backend', 'prefix' => 'api/admin'], function () {
+    Route::post('login', 'Auth\LoginController@login')->name('login');
+    Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+});
+
+
+
+Route::get('backend/{any?}', function () {
+    return view('backend.index');
+})->where('any', '.*');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
