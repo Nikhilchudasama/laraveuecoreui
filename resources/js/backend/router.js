@@ -8,6 +8,8 @@ Vue.use(Router)
 import DefaultContainer from './components/includes/app'
 import Dashboard from './components/dashboard'
 import Login from './components/auth/login'
+import ForgotPassword from './components/auth/forgetPassword'
+import ResetPassword from './components/auth/resetPassword'
 import UserIndex from './components/user/index'
 import UserForm from  './components/user/form'
 
@@ -26,6 +28,27 @@ const router = new Router({
             meta: {
                 public: true,
                 title:'Login',
+                onlyWhenLoggedOut: true
+            }
+        },
+        {
+            path: '/backend/forgot-password',
+            name: 'ForgotPassword',
+            component: ForgotPassword,
+            meta: {
+                public: true,
+                title:'Forgot Password',
+                onlyWhenLoggedOut: true
+            }
+        },
+        {
+            path: '/backend/reset-password/:token/:email',
+            name: 'ResetPassword',
+            component: ResetPassword,
+            props: true,
+            meta: {
+                public: true,
+                title:'Reset Password',
                 onlyWhenLoggedOut: true
             }
         },
