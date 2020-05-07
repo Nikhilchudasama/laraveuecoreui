@@ -1,5 +1,8 @@
 <?php
 
+Route::namespace('Auth')->group(function () {
+    Route::post('forgot-password', 'ForgotPasswordController@forgotPassword');
+});
 
 Route::middleware(['auth:api'])->group(function () {
     Route::get('users', 'UserController@index');

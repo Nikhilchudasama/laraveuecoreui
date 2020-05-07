@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::group(['namespace' => 'Backend', 'prefix' => 'api/admin'], function () {
     Route::post('login', 'Auth\LoginController@login')->name('login');
     Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+    Route::post('reset-password', 'Auth\ResetPasswordController@resetPassword')->name('password.reset');
 });
 
 
