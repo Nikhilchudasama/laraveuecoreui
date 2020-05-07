@@ -46,7 +46,7 @@ let axiosMethods = {
                     error.response.data.message.includes('Unauthenticated'))
             ) {
                 UserService.removeUser()
-                window.location.href = '/login?action=session-expired'
+                window.location.href = '/backend/login?action=session-expired'
                 return
             }
 
