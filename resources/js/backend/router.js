@@ -8,6 +8,8 @@ Vue.use(Router)
 import DefaultContainer from './components/includes/app'
 import Dashboard from './components/dashboard'
 import Login from './components/auth/login'
+import UserIndex from './components/user/index'
+import UserForm from  './components/user/form'
 
 const router = new Router({
     mode: 'history',
@@ -39,7 +41,35 @@ const router = new Router({
                         title:'Dashboard',
                         standardUserAllowed: true
                     }
-                }
+                },
+                {
+                    path: '/backend/user',
+                    name: 'User',
+                    component: UserIndex,
+                    meta: {
+                        title:'User',
+                        standardUserAllowed: true
+                    }
+                },
+                {
+                    path: '/backend/user/add',
+                    name: 'AddUserForm',
+                    component: UserForm,
+                    meta: {
+                        title:'Add User',
+                        standardUserAllowed: true
+                    }
+                },
+                {
+                    path: '/backend/user/:user/edit',
+                    name: 'EditUserForm',
+                    component: UserForm,
+                    props: true,
+                    meta: {
+                        title:'Edit User',
+                        standardUserAllowed: true
+                    }
+                },
             ]
         }
     ]

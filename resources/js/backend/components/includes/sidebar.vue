@@ -6,10 +6,16 @@
                     General
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">
+                    <router-link class="nav-link" :to="{ name: 'Dashboard' }">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         Dashboard
-                    </a>
+                    </router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" :to="{ name: 'User' }">
+                        <i class="nav-icon fas fa-user"></i>
+                        User
+                    </router-link>
                 </li>
             </ul>
         </nav>
