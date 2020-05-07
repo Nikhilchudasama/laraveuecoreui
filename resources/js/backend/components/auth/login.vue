@@ -1,5 +1,6 @@
 <template>
-    <div class="container">
+    <div class="app flex-row align-items-center">
+        <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <validation-errors :errors="errors"></validation-errors>
@@ -34,9 +35,7 @@
                                         Login
                                     </button>
 
-<!--                                    <a class="btn btn-link" href="">-->
-<!--                                        Forgot Password?-->
-<!--                                    </a>-->
+                                    <router-link class="btn btn-link" :to="{ name: 'ForgotPassword'}">Forgot Password?</router-link>
                                 </div>
                             </div>
                         </form>
@@ -44,6 +43,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </template>
 

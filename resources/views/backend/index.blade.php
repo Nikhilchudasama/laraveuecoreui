@@ -10,7 +10,7 @@
 
     </head>
     <body class="app header-fixed sidebar-fixed aside-menu-off-canvas sidebar-lg-show">
-        <div id="backend" :class="bodyClass">
+        <div id="backend">
             <router-view></router-view>
         </div>
 
