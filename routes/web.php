@@ -17,10 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::group(['namespace' => 'Backend', 'prefix' => 'api/admin'], function () {
-    Route::post('login', 'Auth\LoginController@login')->name('login');
-    Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-    Route::post('reset-password', 'Auth\ResetPasswordController@resetPassword')->name('password.reset');
+    Route::post('login', 'Auth\LoginController@login')->name('backend.login');
+    Route::post('logout', 'Auth\LoginController@logout')->name('backed.logout');
+    Route::post('reset-password', 'Auth\ResetPasswordController@resetPassword')->name('backend.password.reset');
 });
 
 
