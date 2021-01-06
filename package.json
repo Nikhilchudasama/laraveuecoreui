@@ -12,7 +12,7 @@
     "devDependencies": {
         "@coreui/coreui": "^2.1.12",
         "@fortawesome/fontawesome-free": "^5.14.0",
-        "axios": "^0.19",
+        "axios": "^0.21",
         "babel-core": "^6.26.3",
         "bootstrap": "^4.5.1",
         "bootstrap-vue": "^2.16.0",
